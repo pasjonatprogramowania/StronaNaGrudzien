@@ -43,10 +43,9 @@ a {
     grid-template-areas: '.  asideContent asideContent asideImg .';
     gap: 20px;
     padding: 40px;
+    transition: 0.5s;
 }
 .container.aside:hover {
-    background-color: #181717;
-    transition: 0.5s;
     color: white;
 }
 .container.aside:hover img {
@@ -73,6 +72,7 @@ a {
 svg {
     margin-right: 20px;
     width: 30px;
+    margin-left: 30px;
 }
 div svg.icons {
     margin-left: 30px;
@@ -90,6 +90,15 @@ p {
     margin: 30px;
 }
 
+a:hover {
+    color: rgba(206, 202, 202, 0.678);
+}
+
+.btn {
+    background-color: #212121;
+    padding: 10px;
+}
+
 /* nav */
 .wrapper {
     width: 100%;
@@ -103,9 +112,6 @@ nav a {
     display: block;
     padding: 15px;
 }
-nav a:hover {
-    color: rgba(206, 202, 202, 0.678);
-}
 
 @media screen and (min-width: 768px) {
     nav ul {
@@ -115,5 +121,29 @@ nav a:hover {
     }
     nav li {
         flex: 1 1 0;
+    }
+}
+
+/* table */
+
+table,
+td {
+    border: 1px solid white;
+    margin: 0px;
+}
+
+/* aniamtions */
+
+.blinking {
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+}
+@keyframes blink {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
     }
 }
