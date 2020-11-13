@@ -93,7 +93,15 @@ p {
 a:hover {
     color: rgba(206, 202, 202, 0.678);
 }
-
+.align-center {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: '. iframe .';
+    margin: 40px;
+}
+.align-center iframe {
+    grid-area: iframe;
+}
 .btn {
     background-color: #212121;
     padding: 10px;
